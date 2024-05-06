@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="rts-section rt-center mb--40">
-                    <h2 class="rts__section--title text-capitalize">General Contact Information</h2>
+                    <h2 class="rts__section--title text-capitalize">Общая контактная информация</h2>
                 </div>
             </div>
             <div class="contact-information">
@@ -40,8 +40,8 @@
                                     <i class="fa-thin fa-map-location-dot"></i>
                                 </div>
                                 <p class="--p-m">
-                                    400 Broome St, New York, <br>
-                                    NY 10013, USA
+                                    {{contacts.city}} <br>
+                                    {{contacts.location}}
                                 </p>
                             </div>
                         </div>
@@ -53,8 +53,8 @@
                                     <i class="fa-thin fa-phone"></i>
                                 </div>
                                 <div class="method">
-                                    <a href="callto:+442041542541" class="phone">+44 20 4154 2541</a>
-                                    <a href="callto:+442041542542" class="phone">+44 20 4154 2542</a>
+                                    <a href="callto:{{contacts.phone}}" class="phone">{{contacts.phone}}</a>
+                                    <a href="callto:{{contacts.phone}}" class="phone">{{contacts.phone}}</a>
                                 </div>
                             </div>
                         </div>
@@ -77,8 +77,7 @@
                                     </svg>
                                 </div>
                                 <p class="--p-l rt-regular">
-                                    Mon-Fri: 9 AM – 6 PM <br>
-                                    Saturday: 9 AM – 4 PM
+                                    {{contacts.time}}
                                 </p>
                             </div>
                         </div>
@@ -95,56 +94,28 @@
         <div class="container">
             <div class="row">
                 <div class="rts-seciton rt-center mb--40">
-                    <h2 class="rts__section--title text-capitalize">Other Campus Contacts</h2>
+                    <h2 class="rts__section--title text-capitalize"></h2>
                 </div>
             </div>
             <div class="contact-method">
                 <div class="row justify-content-md-start justify-content-sm-center g-5">
+                    {% for othercontacs in othercontacs %}
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="contact-method__single">
                             <div class="contact-img-bg">
-                                <img src="{% static 'assets/images/contact/01.jpg' %}" alt="">
+                                <img src="{{othercontacs.image.url}}" alt="">
                             </div>
                             <div class="contact-text">
-                                <h3 class="contact-title">London</h3>
-                                <p class="description">University of London, 15 Talbot Square, Tyburnia, London W2 1TT, UK</p>
+                                <h3 class="contact-title">{{othercontacs.title}}</h3>
+                                <p class="description">{{othercontacs.description}}</p>
                                 <div class="contact-link">
-                                    <a href="callto:+442078628360">+44 20 7862 8360</a>
-                                    <a href="mailto:Unipix.info@edu">Unipix.info@edu</a>
+                                    <a href="callto:{{othercontacs.phone}}">{{othercontacs.phone}}</a>
+                                    <a href="mailto:{{othercontacs.email}}">{{othercontacs.email}}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="contact-method__single">
-                            <div class="contact-img-bg">
-                                <img src="{% static 'assets/images/contact/02.jpg' %}" alt="">
-                            </div>
-                            <div class="contact-text">
-                                <h3 class="contact-title">New York</h3>
-                                <p class="description">80 Washington Square E, New York, NY 10003, USA</p>
-                                <div class="contact-link">
-                                    <a href="callto:+442078628360">+44 20 7862 8360</a>
-                                    <a href="mailto:Unipix.info@edu">Unipix.info@edu</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-10">
-                        <div class="contact-method__single">
-                            <div class="contact-img-bg">
-                                <img src="{% static 'assets/images/contact/03.jpg' %}" alt="">
-                            </div>
-                            <div class="contact-text">
-                                <h3 class="contact-title">Boston</h3>
-                                <p class="description">Center for Computing & Data Sciences, 665 Commonwealth Ave, Boston, MA 02215, USA</p>
-                                <div class="contact-link">
-                                    <a href="callto:+442078628360">+44 20 7862 8360</a>
-                                    <a href="mailto:Unipix.info@edu">Unipix.info@edu</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="contact-map mt--30">
@@ -317,35 +288,5 @@
 
     <!-- scripts -->
     <!-- jquery js -->
-    <script src="{% static 'assets/js/vendor/jquery.min.js' %}"></script>
-    <!-- bootstrap 5.0.2 -->
-    <script src="{% static 'assets/js/plugins/bootstrap.min.js' %}"></script>
-    <!-- jquery ui js -->
-    <script src="{% static 'assets/js/vendor/jquery-ui.js' %}"></script>
-    <!-- wow js -->
-    <script src="{% static 'assets/js/vendor/waw.js' %}"></script>
-    <!-- mobile menu -->
-    <script src="{% static 'assets/js/vendor/metismenu.js' %}"></script>
-    <!-- magnific popup -->
-    <script src="{% static 'assets/js/vendor/magnifying-popup.js' %}"></script>
-    <!-- swiper JS 10.2.0 -->
-    <script src="{% static 'assets/js/plugins/swiper.js' %}"></script>
-    <!-- counterup -->
-    <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/waypoint.js' %}"></script>
-    <!-- isotop mesonary -->
-    <script src="{% static 'assets/js/plugins/isotop.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/sticky-sidebar.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/resize-sensor.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/twinmax.js' %}"></script>
-    <!-- dymanic Contact Form -->
-    <script src="{% static 'assets/js/plugins/contact.form.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/nice-select.min.js' %}"></script>
-    <!-- main Js -->
-    <script src="{% static 'assets/js/main.js' %}"></script>
 
-</body>
-
-</html>
 {% endblock %}
