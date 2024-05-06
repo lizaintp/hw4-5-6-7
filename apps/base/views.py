@@ -4,8 +4,5 @@ from apps.base.models import Settings
 
 def index(request):
     settings = Settings.objects.all()
-    return render(request, 'index.html', locals())
+    return render(request, 'base/index.html', locals())
 
-def contact(request):
-    settings = Settings.objects.all()
-    return render(request, "contact.html", locals())
