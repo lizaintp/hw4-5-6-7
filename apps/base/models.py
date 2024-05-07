@@ -19,3 +19,19 @@ class Settings(models.Model):
     class Meta:
         verbose_name = 'Основная настройка'
         verbose_name_plural = 'Основные настройки'
+
+class Title(models.Model):
+    desc = models.CharField(
+        max_length=255,
+        verbose_name='Описание'
+    )
+    subdesc = models.CharField(
+        max_length=255,
+        verbose_name='Второе описание'
+    )
+    def __str__(self):
+        return self.desc 
+    
+    class Meta:
+        verbose_name = 'Главное описание'
+        verbose_name_plural = 'Главные описания'

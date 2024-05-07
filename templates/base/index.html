@@ -25,14 +25,14 @@
                                         <div class="banner__slides--container banner__height">
                                             <div class="banner__slides--content">
                                                 <div class="banner__slides--content--sub">
-                                                    <img src="{% static 'assets/images/icon/e-cap.svg' %}" alt="cap"> knowledge meets
-                                                    innovation
+                                                    <img src="{% static 'assets/images/icon/e-cap.svg' %}" alt="cap"> знания сочетаются
+                                                    с инновациями
                                                 </div>
                                                 <h1 class="banner__slides--content--title">
-                                                    Unleashing Potential
-                                                    Fostering Excellence
+                                                    Раскрытие потенциала
+                                                    Содействие совершенству
                                                 </h1>
-                                                <a href="program-single.html" class="rts-theme-btn btn-arrow">View Our Program
+                                                <a href="program-single.html" class="rts-theme-btn btn-arrow">Ознакомьтесь с нашей программой
                                                     <span><i class="fa-regular fa-arrow-right"></i></span>
                                                 </a>
                                             </div>
@@ -52,14 +52,14 @@
                                         <div class="banner__slides--container banner__height">
                                             <div class="banner__slides--content">
                                                 <div class="banner__slides--content--sub">
-                                                    <img src="{% static 'assets/images/icon/e-cap.svg' %}" alt="cap"> knowledge meets
-                                                    innovation
+                                                    <img src="{% static 'assets/images/icon/e-cap.svg' %}" alt="cap"> знания сочетаются
+                                                    с инновациями
                                                 </div>
                                                 <h1 class="banner__slides--content--title">
-                                                    Unleashing Potential
-                                                    Fostering Excellence
+                                                    Раскрытие потенциала
+                                                    Содействие совершенству
                                                 </h1>
-                                                <a href="program-single.html" class="rts-theme-btn btn-arrow">View Our Program
+                                                <a href="{% url 'program-single' %}" class="rts-theme-btn btn-arrow">Ознакомьтесь с нашей программой
                                                     <span><i class="fa-regular fa-arrow-right"></i></span>
                                                 </a>
                                             </div>
@@ -74,13 +74,13 @@
             </div>
             <div class="banner__slides--navigation">
                 <div class="banner__slides--navigation--single">
-                    <h5 class="nav__title">Undergraduate</h5>
-                    <a href="academic.html" class="nav__description">Browse the undergraduate
-                        degrees</a>
+                    <h5 class="nav__title">Студент</h5>
+                    <a href="{% url 'academic' %}" class="nav__description">Просмотрите
+                        список степеней бакалавра</a>
                 </div>
                 <div class="banner__slides--navigation--single">
-                    <h5 class="nav__title">Graduate</h5>
-                    <a href="academic.html" class="nav__description">Browse the graduate degrees</a>
+                    <h5 class="nav__title">Выпускник</h5>
+                    <a href="{% url 'academic' %}" class="nav__description">Просмотрите список дипломов о высшем образовании</a>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
                                         <path id="circle" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0"></path>
                                     </defs>
                                     <text>
-                                        <textPath xlink:href="#circle">Unipix University * Estd. 1971 * Explore Future *
+                                        <textPath xlink:href="#circle">Аман * обещал * купить * Элизе * чупачупс
                                         </textPath>
                                     </text>
                                 </svg>
@@ -120,24 +120,18 @@
                     <div class="about__right--content">
                         <div class="about__right--content--sub">
                             <img src="{% static 'assets/images/icon/e-cap-pix.svg' %}" alt="cap">
-                            knowledge meets innovation
+                            знания сочетаются с инновациями
                         </div>
-                        <h2 class="about__right--content--title">About University</h2>
-                        <p class="about__right--content--description">At Unipix University, we believe in the
-                            transformative power of education and the boundless potential that resides within each
-                            individual.</p>
-                        <p class="about__right--content--description">Our mission is to foster intellectual curiosity,
-                            empower individuals to realize their fullest potential, and contribute meaningfully to the
-                            betterment of society. commitment to academic excellence, diversity, and community
-                            engagement.</p>
+                        <h2 class="about__right--content--title">Об университете</h2>
+                        <p class="about__right--content--description">{{title.desc}}</p>
+                        <p class="about__right--content--description">{{title.subdesc}}</p>
                         <div class="about__right--content--vision">
                             <div class="mision">
                                 <div class="mision__icon">
                                     <img src="{% static 'assets/images/icon/mission.svg' %}" alt="">
                                 </div>
                                 <div class="mision__title">
-                                    University Mission
-                                    Statement
+                                    Заявление о миссии университета
                                 </div>
                             </div>
                             <div class="vision">
@@ -145,12 +139,11 @@
                                     <img src="{% static 'assets/images/icon/vission.svg' %}" alt="">
                                 </div>
                                 <div class="vision__title">
-                                    University Vision
-                                    Achievement
+                                    Видение университета Достижение
                                 </div>
                             </div>
                         </div>
-                        <a href="program-single.html" class="rts-theme-btn btn-arrow">View Our Program
+                        <a href="{% url 'program-single' %}" class="rts-theme-btn btn-arrow">Ознакомьтесь с Нашей Программой
                             <span><i class="fa-regular fa-arrow-right"></i></span>
                         </a>
                     </div>
@@ -168,15 +161,15 @@
                     <div class="rts-funfact-wrapper">
                         <div class="single-cta-item">
                             <h2 class="single-cta-item__title">90%</h2>
-                            <p>post-graduation success rate</p>
+                            <p>показатель успешности обучения после окончания школы</p>
                         </div>
                         <div class="single-cta-item">
-                            <h2 class="single-cta-item__title">Top 10</h2>
-                            <p>Colleges that Create Futures</p>
+                            <h2 class="single-cta-item__title">Топ 10</h2>
+                            <p>Колледжи, которые создают будущее</p>
                         </div>
                         <div class="single-cta-item">
                             <h2 class="single-cta-item__title">No. 1</h2>
-                            <p>in the nation for materials R&D</p>
+                            <p>в стране проводятся исследования и разработки в области материалов</p>
                         </div>
                     </div>
                 </div>
@@ -191,7 +184,7 @@
             <div class="row rt-center">
                 <div class="col-sm-12">
                     <div class="rts__section--wrapper v__5">
-                        <h2 class="rts__section--title">Academics & Program</h2>
+                        <h2 class="rts__section--title">Ученые & Программа</h2>
                     </div>
                 </div>
             </div>
@@ -201,7 +194,7 @@
                         <div class="program__single--item--bg">
                             <img src="{% static 'assets/images/program/program__bg.jpg' %}" alt="">
                         </div>
-                        <h5 class="program__single--item--title">undergraduate</h5>
+                        <h5 class="program__single--item--title">студент</h5>
 
                         <ul class="program__single--item--list">
                             <li class="program__single--item--list--item">
@@ -232,7 +225,7 @@
                         <div class="program__single--item--bg">
                             <img src="{% static 'assets/images/program/program__bg.jpg' %}" alt="">
                         </div>
-                        <h5 class="program__single--item--title">graduate</h5>
+                        <h5 class="program__single--item--title">выпускник</h5>
 
                         <ul class="program__single--item--list">
                             <li class="program__single--item--list--item">
@@ -263,7 +256,7 @@
                         <div class="program__single--item--bg">
                             <img src="{% static 'assets/images/program/program__bg.jpg' %}" alt="">
                         </div>
-                        <h5 class="program__single--item--title">Lifelong Learning</h5>
+                        <h5 class="program__single--item--title">Обучение на протяжении всей жизни</h5>
 
                         <ul class="program__single--item--list">
                             <li class="program__single--item--list--item">
