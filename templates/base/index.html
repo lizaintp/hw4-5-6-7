@@ -197,26 +197,13 @@
                         <h5 class="program__single--item--title">студент</h5>
 
                         <ul class="program__single--item--list">
+                            {% for student in student %}
                             <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Anthropology
+                                <a href="{% url 'program-single' %}" class="link__list">{{student.name}}
                                     <span><i class="fa-regular fa-arrow-right"></i></span>
                                 </a>
                             </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Applied Mathematics
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Biomedical Engineering
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Astrophysics
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -228,26 +215,13 @@
                         <h5 class="program__single--item--title">выпускник</h5>
 
                         <ul class="program__single--item--list">
+                            {% for graduate in graduate %}
                             <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Applied Computation
+                                <a href="{% url 'program-single' %}" class="link__list">{{graduate.name}}
                                     <span><i class="fa-regular fa-arrow-right"></i></span>
                                 </a>
                             </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Applied Mathematics
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Applied Computation
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Architecture
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -259,26 +233,13 @@
                         <h5 class="program__single--item--title">Обучение на протяжении всей жизни</h5>
 
                         <ul class="program__single--item--list">
+                            {% for lifelonglearning in lifelonglearning %}
                             <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Personal Development
+                                <a href="{% url 'program-single' %}" class="link__list">{{lifelonglearning.name}}
                                     <span><i class="fa-regular fa-arrow-right"></i></span>
                                 </a>
                             </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Arts and Humanities
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Health and Wellness
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            <li class="program__single--item--list--item">
-                                <a href="program-single.html" class="link__list">Social Sciences
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -292,45 +253,34 @@
             <div class="row">
                 <div class="rts__section--wrapper v__6">
                     <p class="rts__section--wrapper--description">
-                        Building a vibrant community of creative and accomplished people from around the world
+                        Создание динамичного сообщества творческих и состоявшихся людей со всего мира
                     </p>
                     <h2 class="rts__section--wrapper--title">
-                        Campus <span> Life</span>
+                        в кампусе <span> Жизнь</span>
                     </h2>
                 </div>
             </div>
             <!-- content -->
             <div class="row g-5">
+                {% for lifeincampus in lifeincampus %}
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="campus__single--item">
                         <a href="campus-life.html">
                             <div class="campus__single--item--thumb">
-                                <img src="{% static 'assets/images/campus/01.jpg' %}" alt="">
+                                <img src="{{lifeincampus.image.url}}" alt="">
                             </div>
+                            <style>
+                                .campus__single--item--thumb img {
+                                    height: 300px;
+                                    width: 300px;
+                                }
+
+                            </style>
                         </a>
-                        <h5 class="campus__single--item--title"><a href="campus-life.html">Student Life <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
+                        <h5 class="campus__single--item--title"><a href="campus-life.html">{{lifeincampus.title}} <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="campus__single--item">
-                        <a href="campus-life.html">
-                            <div class="campus__single--item--thumb">
-                                <img src="{% static 'assets/images/campus/02.jpg' %}" alt="">
-                            </div>
-                        </a>
-                        <h5 class="campus__single--item--title"><a href="campus-life.html">Arts & Culture <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="campus__single--item">
-                        <a href="campus-life.html">
-                            <div class="campus__single--item--thumb">
-                                <img src="{% static 'assets/images/campus/03.jpg' %}" alt="">
-                            </div>
-                        </a>
-                        <h5 class="campus__single--item--title"><a href="campus-life.html">Recreation & Wellness <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <!-- shape area -->
@@ -658,7 +608,7 @@
                         <p class="rts__section--description">Our mission is to provide you with valuable insights</p>
                     </div>
                     <div class="rts__section--link">
-                        <a href="blog.html" class="rts-nbg-btn btn-arrow">View All
+                        <a href="{% url 'blog' %}" class="rts-nbg-btn btn-arrow">View All
                             <span><i class="fa-sharp fa-regular fa-arrow-right"></i>
                         </span></a>
                     </div>
