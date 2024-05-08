@@ -17,36 +17,33 @@
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="javascript:void(0);" class="navigation__menu--item__link">Страницы</a>
                                         <ul class="submenu sub__style">
-                                            <li><a href="about.html">О</a></li>
+                                            <li><a href="{% url 'about' %}">О</a></li>
                                             <!-- <li><a href="athletics.html">Athletics</a></li> -->
                                             <li class="has-child has-arrow">
                                                 <a href="#">Факультет</a>
                                                 <ul class="sub__style">
-                                                    <li><a href="faculty.html">Сотрудники Факультета </a></li>
-                                                    <li class="has-child"><a href="faculty-details.html">Faculty details</a></li>
+                                                    <li><a href="{% url 'faculty' %}">Сотрудники Факультета </a></li>
+                                                    <li class="has-child"><a href="{% url 'faculty-details' %}">Информация о факультете</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="research.html">Исследование</a></li>
+                                            <li><a href="{% url 'research' %}">Исследование</a></li>
                                         </ul>
                                     </li>
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="#" class="navigation__menu--item__link">Ученые</a>
                                         <ul class="submenu sub__style">
-                                            <li><a href="academic.html">Академический</a></li>
-                                            <li><a href="admission.html">Вход</a></li>
-                                            <li><a href="academic-area.html">Академическая область</a></li>
-                                            <li><a href="campus-life.html">Жизнь в кампусе</a></li>
-                                            <li><a href="scholarship.html">Ученость</a></li>
-                                            <li><a href="tution-fee.html">Регистрационный взнос</a></li>
-                                            <li><a href="alumni.html">Выпускники</a></li>
-                                            <li><a href="program-single.html">Программа Одиночная</a></li>
+                                            <li><a href="{% url 'academic' %}">Академический</a></li>
+                                            <li><a href="{% url 'admission' %}">Вход</a></li>
+                                            <li><a href="{% url 'campus-life' %}">Жизнь в кампусе</a></li>
+                                            <li><a href="{% url 'scholarship' %}">Ученость</a></li>
+                                            <li><a href="{% url 'tution-fee' %}">Регистрационный взнос</a></li>
+                                            <li><a href="{% url 'alumni' %}">Выпускники</a></li>
                                         </ul>
                                     </li>
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="#" class="navigation__menu--item__link">Событие</a>
                                         <ul class="submenu sub__style">
-                                            <li><a href="event.html">Событие</a></li>
-                                            <li><a href="event-details.html">Подробности о событии</a></li>
+                                            <li><a href="{% url 'event' %}">Событие</a></li>
                                         </ul>
                                     </li>
                                     <li class="navigation__menu--item has-child has-arrow">

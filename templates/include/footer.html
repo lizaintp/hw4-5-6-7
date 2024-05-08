@@ -38,10 +38,9 @@
                     <h6 class="rt-semi">Наш кампус</h6>
                     <div class="rts-footer-menu">
                         <ul>
-                            <li><a href="academic.html">Академический</a></li>
-                            <li><a href="campus-life.html">Жизнь в кампусе</a></li>
-                            <li><a href="reasearch.html">Исследование</a></li>
-                            <li><a href="academic-area.html">Академическая область</a></li>
+                            <li><a href="{% url 'academic' %}">Академический</a></li>
+                            <li><a href="{% url 'campus-life' %}">Жизнь в кампусе</a></li>
+                            <li><a href="{% url 'research' %}">Исследование</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,11 +50,11 @@
                     <h6 class="rt-semi">Наш кампус</h6>
                     <div class="rts-footer-menu">
                         <ul>
-                            <li><a href="about.html">О </a></li>
-                            <li><a href="tution-fee.html">Регистрационный взнос</a></li>
-                            <li><a href="alumni.html">Выпускники</a></li>
-                            <li><a href="faculty.html">Сотрудники Факультета </a></li>
-                            <li><a href="event.html">Событие</a></li>
+                            <li><a href="{% url 'about' %}">О </a></li>
+                            <li><a href="{% url 'tution-fee' %}">Регистрационный взнос</a></li>
+                            <li><a href="{% url 'alumni' %}">Выпускники</a></li>
+                            <li><a href="{% url 'faculty' %}">Сотрудники Факультета </a></li>
+                            <li><a href="{% url 'event' %}">Событие</a></li>
                         </ul>
                     </div>
                 </div>

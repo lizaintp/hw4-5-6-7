@@ -1,135 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unipix - Factuly Staff Details</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
-    <!-- animate css -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
-    <!-- fontawesome 6.4.2 -->
-    <link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css">
-    <!-- bootstrap min css -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <!-- swiper Css 10.2.0 -->
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-    <!-- Bootstrap 5.0.2 -->
-    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
-    <!-- metismenu scss -->
-    <link rel="stylesheet" href="assets/css/vendor/metismenu.css">
-    <!-- nice select js -->
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
-    <!-- custom style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
     <!-- header area start -->
-    <header class="header v__5 @@class header__sticky">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="header__wrapper">
-                        <div class="header__logo">
-                            <a href="index.html" class="header__logo--link">
-                                <img src="assets/images/logo/logo__five.svg" alt="unipix">
-                            </a>
-                        </div>
-                        <div class="header__menu">
-                            <div class="navigation">
-                                <nav class="navigation__menu">
-                                    <ul>
-                                        <li class="navigation__menu--item has-child has-arrow">
-                                            <a href="javascript:void(0);" class="navigation__menu--item__link">Home</a>
-                                            <ul class="submenu sub__style">
-                                                <li><a href="index.html">Home Style One</a></li>
-                                                <li><a href="index-two.html">Home Style Two</a></li>
-                                                <li><a href="index-three.html">Home Style three</a></li>
-                                                <li><a href="index-four.html">Home Style four</a></li>
-                                                <li><a href="index-five.html">Home Style five</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="navigation__menu--item has-child has-arrow">
-                                            <a href="javascript:void(0);" class="navigation__menu--item__link">Pages</a>
-                                            <ul class="submenu sub__style">
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="athletics.html">Athletics</a></li>
-                                                <li class="has-child has-arrow">
-                                                    <a href="#">Faculty</a>
-                                                    <ul class="sub__style">
-                                                        <li><a href="faculty.html">Faculty Staff</a></li>
-                                                        <li class="has-child"><a href="faculty-details.html">Faculty details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="research.html">Research</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="navigation__menu--item has-child has-arrow">
-                                            <a href="#" class="navigation__menu--item__link">Academics</a>
-                                            <ul class="submenu sub__style">
-                                                <li><a href="academic.html">Academic</a></li>
-                                                <li><a href="admission.html">Admission</a></li>
-                                                <li><a href="academic-area.html">Academic Area</a></li>
-                                                <li><a href="campus-life.html">Campus Life</a></li>
-                                                <li><a href="scholarship.html">Scholarship</a></li>
-                                                <li><a href="tution-fee.html">Tution Fee</a></li>
-                                                <li><a href="alumni.html">Alumni</a></li>
-                                                <li><a href="program-single.html">Program Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="navigation__menu--item has-child has-arrow">
-                                            <a href="#" class="navigation__menu--item__link">Event</a>
-                                            <ul class="submenu sub__style">
-                                                <li><a href="event.html">Event</a></li>
-                                                <li><a href="event-details.html">Event Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="navigation__menu--item has-child has-arrow">
-                                            <a href="#" class="navigation__menu--item__link">Blog</a>
-                                            <ul class="submenu sub__style">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                <li><a href="blog-list.html">Blog List</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="navigation__menu--item">
-                                            <a href="contact.html" class="navigation__menu--item__link">Contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="header__right">
-                            <div class="header__right--item">
-                                <div id="langSwitcher" class="lang__trigger">
-                                    <span class="selected__lang">English</span>
-                                    <i class="fa-light fa-globe"></i>
-                                    <div class="translate__lang">
-                                        <ul>
-                                            <li><a href="#" class="active">English</a></li>
-                                            <li><a href="#">French</a></li>
-                                            <li><a href="#">Spanish</a></li>
-                                            <li><a href="#">Romanian</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="search-btn" class="search__trigger">
-                                    <i class="fa-sharp fa-light fa-magnifying-glass"></i>
-                                </div>
-                                <div id="menu-btn" class="menu__trigger">
-                                    <img src="assets/images/icon/menu__bar-2.svg" alt="bar">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include 'include/header.html' %}
     <!-- header area end -->
 
 
@@ -140,10 +13,10 @@
                 <div class="col-12">
                     <div class="breadcrumb-content">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Faculty Details</li>
+                            <li class="breadcrumb-item"><a href="index.html">Главная страница</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Информация о факультете</li>
                         </ul>
-                        <h2 class="section-title">Faculty Details</h2>
+                        <h2 class="section-title">Информация о факультете</h2>
                     </div>
                 </div>
             </div>
@@ -161,7 +34,7 @@
                     <div class="faculty-member">
                         <div class="faculty-member__details rt-center ">
                             <div class="faculty-member__image">
-                                <img src="assets/images/faculty/mem-1.jpg" alt="member image">
+                                <img src="{% static 'assets/images/faculty/mem-1.jpg' %}" alt="member image">
                             </div>
                             <div class="faculty-member__info">
                                 <div class="faculty-member__info--social">
@@ -170,8 +43,8 @@
                                     <a href="#"><i class="fa-brands fa-medium"></i></a>
                                     <a href="#"><i class="fa-brands fa-youtube"></i></a>
                                 </div>
-                                <a href="mailto:jenni@Unipixuni.edu" class="email-contact"><span><i class="fa-light fa-envelope"></i></span>jenni@Unipixuni.edu</a>
-                                <a href="calltto:121" class="phone-contact"><span><i class="fa-light fa-phone"></i></span>+122451247241</a>
+                                <a href="{{info.email}}" class="email-contact"><span><i class="fa-light fa-envelope"></i></span>{{info.email}}</a>
+                                <a href="{{info.phone}}" class="phone-contact"><span><i class="fa-light fa-phone"></i></span>{{info.phone}}</a>
                             </div>
                         </div>
                     </div>
@@ -180,37 +53,37 @@
                     <div class="member-info ">
                         <div class="member-info__details">
                             <div class="short-info">
-                                <h4 class="rts-section-title mb--15">Jennifer Aarons, PhD</h4>
-                                <span class="designation">Assistant Professor</span>
+                                <h4 class="rts-section-title mb--15">{{info.name}}</h4>
+                                <span class="designation">{{info.profession}}</span>
                                 <p class="description">
-                                    Katherine Panagakos earned her M.A. in Classics from Tulane University and her Ph.D. in Greek and Latin from The Ohio State University. During her graduate work, she was a student at The American School of Classical Studies at Athens (ASCSA) and was a field walker and camp manager at the Eastern Korinthia Archaeogical Survey (EKAS). Katherine spent three years in a rotating position at schools in the Associated Colleges of the South (Southwestern University in Georgetown, TX; Furman University in Greenville, SC; and Rhodes College in Memphis, TN).
+                                    {{info.desc}}
                                 </p>
                             </div>
                             <div class="short-info">
-                                <h5 class="rts-section-title">Biography</h5>
+                                <h5 class="rts-section-title">Биография</h5>
                                 <p class="description">
-                                    She began teaching primarily Latin and Classics-related courses at Unipix in January of 2008. Katherine serves as the advisor for the Classics National Honor Society (ΗΣΦ) and OGRE (Order of Greco-Roman Enthusiasts), as well as being an active member of the Interdisciplinary Center of Hellenic Studies (ICHS) and the Friends of Hellenic Studies (FHS). Her research focuses on the ancient Greek and Roman novels. Katherine is currently working on three manuscripts. The first focuses on the role of pirates and robbers in the ancient novels and the other two are in collaboration with former students: one is an intermediate Greek text on Aesop’s Fables; the other is a collection of essays on suicide in the ancient Greco-Roman world.
+                                    {{info.bio}}
                                 </p>
-                                <h5 class="rts-section-title">Education</h5>
-                                <p class="description">Ph.D., The Ohio State University</p>
-                                <h5 class="rts-section-title">AREAS OF EXPERTISE</h5>
-                                <p class="description">Latin language and literature, Ancient Greek and Roman novels, Augustan Age, Classical mythology, Greco-Romans in film, zombies in popular culture
+                                <h5 class="rts-section-title">Образование</h5>
+                                <p class="description">{{info.desceducation}}</p>
+                                <h5 class="rts-section-title">ОБЛАСТИ СПЕЦИАЛИЗАЦИИ</h5>
+                                <p class="description">{{info.areasofexpertise}}
                                 </p>
                             </div>
                             <div class="short-info">
-                                <h5 class="rts-section-title">COURSES</h5>
+                                <h5 class="rts-section-title">КУРСЫ</h5>
                                 <div class="course__single">
                                     <ul class="list-unstyled">
-                                        <li><a href="#">LANG 1220/1221 Beginning Latin I & II</a></li>
-                                        <li><a href="#">LANG 3760/3761Advanced Greek I and II (Lucian, Longus, and Homer)</a></li>
-                                        <li><a href="#">GAH 1038 Reacting to the Past</a></li>
-                                        <li><a href="#">GAH 1401 Classical Myth and Legend</a></li>
+                                        <li><a href="#">ЯЗЫК 1220/1221, начинающийся с латыни I и II</a></li>
+                                        <li><a href="#">ЯЗЫК 3760/3761 - продвинутый греческий I и II (Лукиан, Лонг и Гомер)</a></li>
+                                        <li><a href="#">GAH 1038 - Реакция на прошлое</a></li>
+                                        <li><a href="#">GAH 1401 Классические мифы и легенды</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>  
                             <div class="short-info">
-                                <h5 class="rts-section-title">PUBLICATIONS</h5>
-                                <p>Review of Stefan Tilg’s Chariton of Aphrodisias and the invention of the Greek Love Novel (Oxford UP, 2010).Bryn Mawr Classical Review. Bryn Mawr, PA: BMCR, 2011.
+                                <h5 class="rts-section-title">ПУБЛИКАЦИИ</h5>
+                                <p>{{info.publication}}
                                 </p>
                             </div>
                         </div>
@@ -224,68 +97,7 @@
 
 
     <!-- footer -->
-    <footer class="footer v__1">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <div class="footer__widget--logo">
-                            <a href="index"><img src="assets/images/logo/logo__white.svg" alt="logo"></a>
-                        </div>
-                        <p class="footer__widget--description">
-                            We are passionate education dedicated to providing high-quality resources learners
-                            all backgrounds.
-                        </p>
-                        <div class="footer__widget--social">
-                            <ul class="social">
-                                <li class="social__link"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                <li class="social__link"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li class="social__link"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                <li class="social__link"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <h6 class="footer__widget--title">Our Campus</h6>
-                        <div class="footer__widget--menu">
-                            <ul>
-                                <li><a href="academic.html">Academic</a></li>
-                                <li><a href="athletics.html">Athletics</a></li>
-                                <li><a href="campus-life.html">Campus life</a></li>
-                                <li><a href="reasearch.html">Research</a></li>
-                                <li><a href="academic-area.html">Academic Area</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <h6 class="footer__widget--title">Our Campus</h6>
-                        <div class="footer__widget--menu">
-                            <ul>
-                                <li><a href="about.html">About </a></li>
-                                <li><a href="tution-fee.html">Tution Fee</a></li>
-                                <li><a href="alumni.html">Alumni</a></li>
-                                <li><a href="faculty.html">Faculty Staff</a></li>
-                                <li><a href="event.html">Event</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <h6 class="footer__widget--title">Quick Button</h6>
-                        <div class="footer__widget--button">
-                            <a href="admission.html" class="cta__button active">Applying</a>
-                            <a href="scholarship.html" class="cta__button">scholarship</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'include/footer.html' %}
     <!-- footer end -->
 
     <!-- footer copyright -->
@@ -309,7 +121,7 @@
         <!-- inner menu area desktop start -->
         <div class="inner-main-wrapper-desk">
             <div class="thumbnail">
-                <img src="assets/images/logo/logo__five.svg" alt="Unipix-university">
+                <img src="{% static 'assets/images/logo/logo__five.svg' %}" alt="Unipix-university">
             </div>
             <div class="inner-content">
                 <p class="disc">
@@ -318,8 +130,8 @@
                 <!-- offcanvase banner -->
                 <div class="offcanvase__banner mt--50">
                     <div class="offcanvase__banner--content">
-                        <img src="assets/images/offcanvase.jpg" alt="offcanvase">
-                        <a href="admission.html" class="rts-theme-btn">Apply Now</a>
+                        <img src="{% static 'assets/images/offcanvase.jpg' %}" alt="offcanvase">
+                        <a href="{% url 'admission' %}" class="rts-theme-btn">Apply Now</a>
                     </div>
                 </div>
                 <div class="offcanvase__info">
@@ -447,34 +259,5 @@
 
     <!-- scripts -->
     <!-- jquery js -->
-    <script src="assets/js/vendor/jquery.min.js"></script>
-    <!-- bootstrap 5.0.2 -->
-    <script src="assets/js/plugins/bootstrap.min.js"></script>
-    <!-- jquery ui js -->
-    <script src="assets/js/vendor/jquery-ui.js"></script>
-    <!-- wow js -->
-    <script src="assets/js/vendor/waw.js"></script>
-    <!-- mobile menu -->
-    <script src="assets/js/vendor/metismenu.js"></script>
-    <!-- magnific popup -->
-    <script src="assets/js/vendor/magnifying-popup.js"></script>
-    <!-- swiper JS 10.2.0 -->
-    <script src="assets/js/plugins/swiper.js"></script>
-    <!-- counterup -->
-    <script src="assets/js/plugins/counterup.js"></script>
-    <script src="assets/js/vendor/waypoint.js"></script>
-    <!-- isotop mesonary -->
-    <script src="assets/js/plugins/isotop.js"></script>
-    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/plugins/sticky-sidebar.js"></script>
-    <script src="assets/js/plugins/resize-sensor.js"></script>
-    <script src="assets/js/plugins/twinmax.js"></script>
-    <!-- dymanic Contact Form -->
-    <script src="assets/js/plugins/contact.form.js"></script>
-    <script src="assets/js/plugins/nice-select.min.js"></script>
-    <!-- main Js -->
-    <script src="assets/js/main.js"></script>
 
-</body>
-
-</html>
+{% endblock %}

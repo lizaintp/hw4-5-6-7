@@ -32,9 +32,7 @@
                                                     Раскрытие потенциала
                                                     Содействие совершенству
                                                 </h1>
-                                                <a href="program-single.html" class="rts-theme-btn btn-arrow">Ознакомьтесь с нашей программой
-                                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                                </a>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -59,9 +57,6 @@
                                                     Раскрытие потенциала
                                                     Содействие совершенству
                                                 </h1>
-                                                <a href="{% url 'program-single' %}" class="rts-theme-btn btn-arrow">Ознакомьтесь с нашей программой
-                                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -143,9 +138,6 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="{% url 'program-single' %}" class="rts-theme-btn btn-arrow">Ознакомьтесь с Нашей Программой
-                            <span><i class="fa-regular fa-arrow-right"></i></span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -195,16 +187,6 @@
                             <img src="{% static 'assets/images/program/program__bg.jpg' %}" alt="">
                         </div>
                         <h5 class="program__single--item--title">студент</h5>
-
-                        <ul class="program__single--item--list">
-                            {% for student in student %}
-                            <li class="program__single--item--list--item">
-                                <a href="{% url 'program-single' %}" class="link__list">{{student.name}}
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-10">
@@ -213,16 +195,6 @@
                             <img src="{% static 'assets/images/program/program__bg.jpg' %}" alt="">
                         </div>
                         <h5 class="program__single--item--title">выпускник</h5>
-
-                        <ul class="program__single--item--list">
-                            {% for graduate in graduate %}
-                            <li class="program__single--item--list--item">
-                                <a href="{% url 'program-single' %}" class="link__list">{{graduate.name}}
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-10">
@@ -231,16 +203,6 @@
                             <img src="{% static 'assets/images/program/program__bg.jpg' %}" alt="">
                         </div>
                         <h5 class="program__single--item--title">Обучение на протяжении всей жизни</h5>
-
-                        <ul class="program__single--item--list">
-                            {% for lifelonglearning in lifelonglearning %}
-                            <li class="program__single--item--list--item">
-                                <a href="{% url 'program-single' %}" class="link__list">{{lifelonglearning.name}}
-                                    <span><i class="fa-regular fa-arrow-right"></i></span>
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -265,7 +227,7 @@
                 {% for lifeincampus in lifeincampus %}
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="campus__single--item">
-                        <a href="campus-life.html">
+                        <a href="{% url 'campus-life' %}">
                             <div class="campus__single--item--thumb">
                                 <img src="{{lifeincampus.image.url}}" alt="">
                             </div>
@@ -277,7 +239,7 @@
 
                             </style>
                         </a>
-                        <h5 class="campus__single--item--title"><a href="campus-life.html">{{lifeincampus.title}} <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
+                        <h5 class="campus__single--item--title"><a href="{% url 'campus-life' %}">{{lifeincampus.title}} <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
                     </div>
                 </div>
                 {% endfor %}
@@ -297,46 +259,33 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-4">
                     <div class="rts__section--wrapper v__7">
-                        <h2 class="rts__section--title">Tuition Fees at
-                            Unipix University</h2>
+                        <h2 class="rts__section--title">Стоимость обучения в
+                            университете Unipix</h2>
                         <p class="rts__section--description">
-                            At Unipix University Name we are committed to providing a high-quality education that is accessible to a diverse range of students.
+                            В университете Unipix мы стремимся предоставлять высококачественное образование, доступное широкому кругу студентов.
                         </p>
-                        <a href="tution-fee.html" class="rts-theme-btn btn-arrow">Plan Details
+                        <a href="{% url 'tution-fee' %}" class="rts-theme-btn btn-arrow">Детали плана
                             <span><i class="fa-regular fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>
+                {% for tuitionfees in tuitionfees %}
                 <div class="col-lg-4 col-md-6">
                     <div class="tution__single--box v__1">
-                        <h5 class="tution__single--box--title">Undergraduate Programs</h5>
-                        <h6 class="tution__single--box--faculty">College of Arts and Sciences</h6>
+                        <h5 class="tution__single--box--title">{{tuitionfees.name}}</h5>
+                        <h6 class="tution__single--box--faculty">{{tuitionfees.subname}}</h6>
                         <ul class="tution__single--box--feature">
-                            <li>Full-Time Tuition (per semester): $241</li>
-                            <li>Part-Time Tuition (per credit): $141</li>
+                            <li>{{tuitionfees.list}}</li>
+                            <li>{{tuitionfees.list}}</li>
                         </ul>
-                        <h6 class="tution__single--box--faculty">School of Business</h6>
+                        <h6 class="tution__single--box--faculty">{{tuitionfees.subname}}</h6>
                         <ul class="tution__single--box--feature">
-                            <li>Full-Time Tuition (per semester): $241</li>
-                            <li>Part-Time Tuition (per credit): $141</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tution__single--box">
-                        <h5 class="tution__single--box--title">Graduate Programs</h5>
-                        <h6 class="tution__single--box--faculty">Graduate School/Department</h6>
-                        <ul class="tution__single--box--feature">
-                            <li>Full-Time Tuition (per semester): $241</li>
-                            <li>Part-Time Tuition (per credit): $141</li>
-                        </ul>
-                        <h6 class="tution__single--box--faculty">Additional Fees</h6>
-                        <ul class="tution__single--box--feature">
-                            <li>Technology Fee: $149 per semester</li>
-                            <li>Student Activity Fee: $99 per semester</li>
+                            <li>{{tuitionfees.list}}</li>
+                            <li>{{tuitionfees.list}}</li>
                         </ul>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -347,9 +296,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="rts-scholarship-info">
-                        <h2 class="rts-section-title">Scholarships and Financial Aid</h2>
-                        <p class="w-740 mb--50">Each semester, Brac University is proud to honor academically talented and exceptionally skilled students with a variety of scholarships and awards. The university annually awards more than 100 million takas as scholarships to both undergraduate and postgraduate students.</p>
-                        <a href="scholarship.html" class="rts-theme-btn btn-arrow">Know More<span><i class="fa-thin fa-arrow-right"></i></span></a>
+                        <h2 class="rts-section-title">Стипендии и финансовая помощь</h2>
+                        <p class="w-740 mb--50">{{scholarship.desc}}</p>
+                        <a href="{% url 'scholarship' %}" class="rts-theme-btn btn-arrow">Узнать больше<span><i class="fa-thin fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -362,9 +311,9 @@
         <div class="container">
             <div class="row">
                 <div class="rts__section--wrapper v__8">
-                    <h2 class="rts__section--title">Alumni Event</h2>
+                    <h2 class="rts__section--title">Мероприятие для выпускников</h2>
                     <div class="rts__section--link">
-                        <a href="event.html" class="rts-nbg-btn btn-arrow">View All
+                        <a href="{% url 'event' %}" class="rts-nbg-btn btn-arrow">посмотреть все
                             <span><i class="fa-sharp fa-regular fa-arrow-right"></i>
                         </span></a>
                     </div>
@@ -618,7 +567,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 col-md-6">
                     <div class="blog__single--item">
-                        <a href="blog-details.html" class="blog__single--item--link">
+                        <a href="{% url 'blog-details' %}" class="blog__single--item--link">
                             <div class="blog__single--item--thumb">
                                 <img src="{% static 'assets/images/blog/blog__1.jpg' %}" alt="">
                             </div>
@@ -626,7 +575,7 @@
                         <div class="blog__single--item--meta">
                             <a href="#" class="blog__cat">Campus</a>
                             <h5 class="blog__single--item--title">
-                                <a href="blog-details.html">10 from Harvard named Rhodes Scholars</a>
+                                <a href="{% url 'blog-details' %}">10 from Harvard named Rhodes Scholars</a>
                             </h5>
                             <p class="blog__single--item--excerpt">You'll find something to spark your
                                 curiosity and enhance</p>
@@ -646,7 +595,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="blog__single--item">
-                        <a href="blog-details.html" class="blog__single--item--link">
+                        <a href="{% url 'blog-details' %}" class="blog__single--item--link">
                             <div class="blog__single--item--thumb">
                                 <img src="{% static 'assets/images/blog/blog__2.jpg' %}" alt="">
                             </div>
@@ -654,7 +603,7 @@
                         <div class="blog__single--item--meta">
                             <a href="#" class="blog__cat">Marketing</a>
                             <h5 class="blog__single--item--title">
-                                <a href="blog-details.html">Announcing the winners the 2023 Education </a>
+                                <a href="{% url 'blog-details' %}">Announcing the winners the 2023 Education </a>
                             </h5>
                             <p class="blog__single--item--excerpt">You'll find something to spark your
                                 curiosity and enhance</p>

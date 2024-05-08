@@ -3,5 +3,5 @@ from apps.base.views import index, about
 
 urlpatterns = [
     path('', index, name = 'index'),
-    path('', about, name = 'about')
+    path('about/', about, name = 'about')
 ]
