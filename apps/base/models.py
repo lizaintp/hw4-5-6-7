@@ -10,8 +10,9 @@ class Settings(models.Model):
         max_length=100,
         verbose_name='ФИО'
     )
-    subdescription = models.TextField(
-        verbose_name='Миниописание'
+    insta = models.URLField(
+        max_length=255,
+        verbose_name='Телефон'
     )
     def __str__(self):
         return self.fullname

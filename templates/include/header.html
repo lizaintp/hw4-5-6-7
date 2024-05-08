@@ -6,7 +6,7 @@
                 <div class="header__wrapper">
                     <div class="header__logo">
                         <a href="{% url 'index' %}" class="header__logo--link">
-                            <img src="{{settings.logo.url}}" alt="unipix">
+                            <img src="{{settings.logo.url}}" style = 'width: 100px;' alt="unipix">
                         </a>
                     </div>
                     <div class="header__menu">
@@ -22,10 +22,11 @@
                                             <li class="has-child has-arrow">
                                                 <a href="#">Факультет</a>
                                                 <ul class="sub__style">
-                                                    <li><a href="{% url 'faculty' %}">Сотрудники Факультета </a></li>
-                                                    <li class="has-child"><a href="{% url 'faculty-details' %}">Информация о факультете</a></li>
+                                                    <li><a href="{% url 'faculty' %}">Сотрудники Факультета</a></li>
+                                                    <li class="has-child"><a href="{% url 'faculty-detailss' %}">Информация о факультете</a></li>
                                                 </ul>
                                             </li>
+                                            
                                             <li><a href="{% url 'research' %}">Исследование</a></li>
                                         </ul>
                                     </li>
@@ -39,13 +40,8 @@
                                             <li><a href="{% url 'tution-fee' %}">Регистрационный взнос</a></li>
                                             <li><a href="{% url 'alumni' %}">Выпускники</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="navigation__menu--item has-child has-arrow">
-                                        <a href="#" class="navigation__menu--item__link">Событие</a>
-                                        <ul class="submenu sub__style">
-                                            <li><a href="{% url 'event' %}">Событие</a></li>
-                                        </ul>
-                                    </li>
+                                    </li>                                    
+                                        <a href="{% url 'event' %}" class="navigation__menu--item__link">Событие</a>
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="#" class="navigation__menu--item__link">Блог</a>
                                         <ul class="submenu sub__style">

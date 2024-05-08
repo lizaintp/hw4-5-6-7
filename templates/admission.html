@@ -7,16 +7,16 @@
 
 
     <!-- BREADCRUMB AREA -->
-    <section class="rts-breadcrumb breadcrumb-height breadcumb-bg" style="background-image: url(assets/images/banner/breadcrumb.jpg);">
+    <section class="rts-breadcrumb breadcrumb-height breadcumb-bg" style="background-image: url({% static 'assets/images/banner/breadcrumb.jpg' %});">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Apply Admission</li>
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Главная страница</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Подать заявку на поступление</li>
                         </ul>
-                        <h2 class="section-title">Apply to Unipix University</h2>
+                        <h2 class="section-title">Подать заявление в Университет Unipix</h2>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="col-12">
                     <div class="admission-content-top">
                         <h3 class="rts-section-title">
-                            First-Year Applicants
+                            Абитуриенты-первокурсники
                         </h3>
 
                         <div class="admission-big-thumb">
@@ -40,26 +40,26 @@
                         </div>
 
                         <div class="requirement-deadline">
-                            <h3 class="rts-section-title">Requirements and Deadlines</h3>
+                            <h3 class="rts-section-title">Требования и сроки выполнения</h3>
                             <div class="requirement-deadline__content">
                                 <ul>
-                                    <li class="single-requirement">$90 nonrefundable application fee or fee waiver request</li>
-                                    <li class="single-requirement">ACT or SAT test scores (test optional)</li>
-                                    <li class="single-requirement">School Report form and counselor letter of recommendation </li>
-                                    <li class="single-requirement">Official transcript(s) or academic results</li>
-                                    <li class="single-requirement">Letters of recommendation from two teachers</li>
-                                    <li class="single-requirement">Midyear transcript (due by February 15)</li>
-                                    <li class="single-requirement">$90 nonrefundable application fee or fee waiver request</li>
-                                    <li class="single-requirement">ACT or SAT test scores (test optional)</li>
-                                    <li class="single-requirement">School Report form and counselor letter of recommendation </li>
-                                    <li class="single-requirement">Official transcript(s) or academic results</li>
-                                    <li class="single-requirement">Letters of recommendation from two teachers</li>
-                                    <li class="single-requirement">Midyear transcript (due by February 15)</li>
+                                    <li class="single-requirement">невозвращаемый регистрационный сбор в размере 90 долларов США или запрос на отказ от сбора</li>
+                                    <li class="single-requirement">Результаты тестов ACT или SAT (тест необязательный)</li>
+                                    <li class="single-requirement">Форма школьного отчета и рекомендательное письмо консультанта </li>
+                                    <li class="single-requirement">Официальная стенограмма(ы) или академические результаты</li>
+                                    <li class="single-requirement">Рекомендательные письма от двух учителей</li>
+                                    <li class="single-requirement">Стенограмма за середину года (должна быть опубликована до 15 февраля)</li>
+                                    <li class="single-requirement">невозвращаемый регистрационный сбор в размере 90 долларов США или запрос на отказ от сбора</li>
+                                    <li class="single-requirement">Результаты тестов ACT или SAT (тест необязательный)</li>
+                                    <li class="single-requirement">Форма школьного отчета и рекомендательное письмо консультанта </li>
+                                    <li class="single-requirement">Официальная стенограмма(ы) или академические результаты</li>
+                                    <li class="single-requirement">Рекомендательные письма от двух учителей</li>
+                                    <li class="single-requirement">Стенограмма за середину года (должна быть опубликована до 15 февраля)</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="application-deadline">
-                            <h3 class="rts-section-title">Application Deadlines</h3>
+                            <h3 class="rts-section-title">Крайние сроки подачи заявок</h3>
                             <div class="application-deadline__content">
                                 <div class="application-deadline__content--table">
                                     <table class="table">
@@ -94,8 +94,8 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <p> Unipix reserves the right to evaluate an application and render a final decision even if all pieces of the application have not been received.</p>
-                                <p class="w-95 mx-0">Applicants are limited to a total of three applications for undergraduate admission, whether for first-year admission, transfer admission or a <br>combination of both. If you have submitted fewer than three applications to Unipix, you may reapply.
+                                <p> Unipix оставляет за собой право оценить заявку и вынести окончательное решение, даже если все части заявки еще не были получены.</p>
+                                <p class="w-95 mx-0">Кандидаты могут подать в общей сложности не более трех заявлений на поступление в бакалавриат, будь то на первый курс, при переводе или на комбинацию того и другого. Если вы подали в Unipix менее трех заявлений, вы можете подать их повторно.
                                 </p>
                             </div>
                         </div>
@@ -105,112 +105,112 @@
             <div class="row sticky-coloum-wrap g-5 mt--45">
                 <div class="col-lg-8">
                     <div class="rts-ap-section">
-                        <h3 class="rts-section-title mb--30">Application Details</h3>
+                        <h3 class="rts-section-title mb--30">Детали приложения</h3>
                         <div class="rts-application-form">
                             <form action="#">
                                 <div class="single-form-part">
-                                    <h5 class="form-title">Personal Information</h5>
+                                    <h5 class="form-title">Личная информация</h5>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="fname">First Name</label>
-                                            <input type="text" id="fname" placeholder="First name">
+                                            <label for="fname">Имя</label>
+                                            <input type="text" id="fname" placeholder="Введите свое имя">
                                         </div>
                                         <div class="single-input-item">
-                                            <label for="lname">Last Name</label>
-                                            <input type="text" id="lname" placeholder="Last name">
+                                            <label for="lname">Фамилия</label>
+                                            <input type="text" id="lname" placeholder="Введите свою фамилию">
                                         </div>
                                     </div>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="email2">Enter your mail</label>
-                                            <input type="email" id="email2" placeholder="Enter your mail">
+                                            <label for="email2">Почта</label>
+                                            <input type="email" id="email2" placeholder="Введите свою почту">
                                         </div>
                                         <div class="single-input-item">
-                                            <label for="phone">Enter Phone Number</label>
-                                            <input type="tel" id="phone" placeholder="Enter Phone Number">
+                                            <label for="phone">Телефон</label>
+                                            <input type="tel" id="phone" placeholder="Введите свой номер">
                                         </div>
                                     </div>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="dob">Date of Birth</label>
-                                            <input type="text" id="datepicker" placeholder="dd/mm/yy">
+                                            <label for="dob">Дата рождения</label>
+                                            <input type="text" id="datepicker" placeholder="дд/мм/гг">
                                         </div>
                                         <div class="single-input-item">
-                                            <label for="gender">Gender</label>
+                                            <label for="gender">Пол</label>
                                             <select name="gender" id="gender">
-                                                <option value="*">Gender</option>
-                                                <option value="*">Male</option>
-                                                <option value="*">Female</option>
+                                                <option value="*">Пол</option>
+                                                <option value="*">Женский</option>
+                                                <option value="*">Мужской</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="country">Select your Country </label>
-                                            <input id="country" type="text" placeholder="Country">
+                                            <label for="country">Выберите свою страну </label>
+                                            <input id="country" type="text" placeholder="Страна">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="single-form-part">
-                                    <h5 class="form-title">Academic Information</h5>
+                                    <h5 class="form-title">Академическая информация</h5>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="cname">Collage Name</label>
-                                            <input id="cname" type="text" placeholder="Collage Name">
+                                            <label for="cname">Название коллажа</label>
+                                            <input id="cname" type="text" placeholder="Название коллажа">
                                         </div>
                                         <div class="single-input-item">
-                                            <label for="gpa">Enter your GPA</label>
-                                            <input id="gpa" type="text" placeholder="Enter your GPA">
+                                            <label for="gpa">Введите свой средний балл</label>
+                                            <input id="gpa" type="text" placeholder="Введите свой средний балл">
                                         </div>
                                     </div>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="cname2">Collage Name</label>
-                                            <input id="cname2" type="text" placeholder="current college">
+                                            <label for="cname2">Название коллажа</label>
+                                            <input id="cname2" type="text" placeholder="текущий коллаж">
                                         </div>
                                         <div class="single-input-item">
-                                            <label for="gpa2">Enter your GPA</label>
-                                            <input type="text" id="gpa2" placeholder="Current GPA">
+                                            <label for="gpa2">Введите свой средний балл</label>
+                                            <input type="text" id="gpa2" placeholder="текущий средний балл">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="single-form-part">
-                                    <h5 class="form-title">Financial Information</h5>
+                                    <h5 class="form-title">Финансовая информация</h5>
                                     <div class="single-input">
                                         <div class="single-input-item">
-                                            <label for="income">Household Income</label>
+                                            <label for="income">Доход домохозяйства</label>
                                             <select name="income" id="income">
-                                                <option value="*">Less then $1k</option>
-                                                <option value="*">Less then $2k</option>
-                                                <option value="*">Less then $3k</option>
+                                                <option value="*">Менее $1k</option>
+                                                <option value="*">Менее $2k</option>
+                                                <option value="*">Менее $3k</option>
                                             </select>
                                         </div>
                                         <div class="single-input-item">
-                                            <label for="yes">applying for need-based financial aid</label>
+                                            <label for="yes">подача заявления на получение финансовой помощи в зависимости от потребностей</label>
                                             <select name="yes" id="yes">
-                                                <option value="*">yes</option>
-                                                <option value="*">no</option>
+                                                <option value="*">да</option>
+                                                <option value="*">нет</option>
                                             </select>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="single-form-part">
-                                    <h5 class="form-title">Agreement and Submission</h5>
-                                    <p>By submitting this application, I confirm that all information provided is accurate and complete. I understand that any false
-                                        information may result in the disqualification of my application.
+                                    <h5 class="form-title">Соглашение и представление</h5>
+                                    <p>Отправляя эту заявку, я подтверждаю, что вся предоставленная информация является точной и полной. Я понимаю, что любая ложная
+                                        информация может привести к отклонению моей заявки.
                                     </p>
                                     <div class="single-input-item">
-                                        <label for="sub">Application Submission:</label>
+                                        <label for="sub">Подача заявки:</label>
                                         <input type="file" id="sub">
                                     </div>
 
                                     <div class="d-flex align-items-center single-checkbox mt--20">
                                         <input type="checkbox" id="exampleCheck1">
-                                        <label for="exampleCheck1">By submitting this form, you agree to the Unipix University Privacy Notice</label>
+                                        <label for="exampleCheck1">Отправляя эту форму, вы соглашаетесь с Уведомлением о конфиденциальности Unipix University</label>
                                     </div>
                                 </div>
-                                <button type="submit" class="rts-theme-btn primary with-arrow">Submit Application<span><i class="fa-thin fa-arrow-right"></i></span></button>
+                                <button type="submit" class="rts-theme-btn primary with-arrow">Подать заявку<span><i class="fa-thin fa-arrow-right"></i></span></button>
                             </form>
                         </div>
                     </div>
@@ -218,64 +218,12 @@
                 <div class="col-lg-4 sticky-coloum-item">
                     <div class="program-sidebar">
                         <!-- curriculum -->
-                        <div class="program-curriculum">
-                            <h6 class="heading-title">B.A In African Studies</h6>
-                            <div class="program-menu">
-                                <ul class="list-unstyled">
-                                    <li><a href="#"><span><i class="fa-light fa-arrow-right"></i></span>Course Curriculum</a></li>
-                                    <li><a href="#"><span><i class="fa-light fa-arrow-right"></i></span>Program Faculty</a></li>
-                                    <li><a href="#"><span><i class="fa-light fa-arrow-right"></i></span>Apply Admission</a></li>
-                                    <li><a href="#"><span><i class="fa-light fa-arrow-right"></i></span>Scholarship </a></li>
-                                    <li><a href="#"><span><i class="fa-light fa-arrow-right"></i></span>Joint Event</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <!-- contact info -->
-                        <div class="program-info">
-                            <h5>Department Contact Info</h5>
-                            <p>B.A. in Africana Studies</p>
-                            <div class="contact-info">
-                                <h5>Contact:</h5>
-                                <a href="mailto:barry.Unipix@info.com">barry.Unipix@info.com</a>
-                                <a href="callto:121">664-254-251</a>
-                            </div>
-                            <div class="social-info">
-                                <h5>Social Info:</h5>
-                                <div class="social-info-link">
-                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <!-- join event -->
-                        <div class="program-event">
-                            <div class="program-event-content">
-                                <p>Joint New Event About
-                                    African History
-                                </p>
-                                <h4 class="event-title">B.A. in Africana
-                                    Studies</h4>
-                                <div class="single-event-content-meta">
-                                    <div class="event-time">
-                                        <span><i class="fa-sharp fa-thin fa-clock"></i></span>
-                                        <span>10:30 am</span>
-                                    </div>
-                                    <div class="event-place">
-                                        <span><i class="fa-sharp fa-thin fa-location-dot"></i></span>
-                                        <span>Yarra Park, UK</span>
-                                    </div>
-                                    <div class="event-date">
-                                        <span><i class="fal fa-calendar"></i></span>
-                                        <span>November 28, 2023</span>
-                                    </div>
-                                </div>
-                                <a href="#" class="rts-theme-btn with-arrow btn-white lh-100">Joint Now <span><i class="fa-thin fa-arrow-right"></i></span></a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -293,7 +241,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="copyright__wrapper">
-                        <p>Copyright &copy; 2024 All Rights Reserved by <a href="#">Unipix</a></p>
+                        <p>Авторское право &copy; 2024 Все права защищены <a href="#">Unipix</a></p>
                     </div>
                 </div>
             </div>
@@ -400,16 +348,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html" class="main">Contact Us</a>
+                        <a href="contact.html" class="main">Наши контакты</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="offcanvase__info--content mt--30">
                 <a href="callto:+61485826710"><span><i class="fa-sharp fa-light fa-phone"></i></span>+(61) 485-826-710</a>
-                <a href="#"><span><i class="fa-sharp fa-light fa-location-dot"></i></span>Yarra Park, Melbourne, Australia</a>
+                <a href="#"><span><i class="fa-sharp fa-light fa-location-dot"></i></span>Ярра-парк, Мельбурн, Австралия</a>
                 <div class="offcanvase__info--content--social">
-                    <p class="title">Follow Us:</p>
+                    <p class="title">Подпишитесь на нас:</p>
                     <div class="social__links">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>

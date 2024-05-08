@@ -1,5 +1,5 @@
 from django.urls import path
-from apps.secondary.views import blog, blog_details, academic, admission, alumni, athletics, campus_life, event_details, event, faculty_details, faculty, notice_details,research, scholarship , tution_fee
+from apps.secondary.views import blog, blog_details, academic, admission, alumni, athletics, campus_life, event_details, event, faculty_details, faculty_detailss, faculty, notice_details,research, scholarship , tution_fee
 
 urlpatterns = [
     path('blog/', blog, name = 'blog'),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('event-details/', event_details, name = 'event-details' ),
     path('event/', event, name = 'event' ),
     path('faculty-details/<int:id>/', faculty_details, name='faculty-details' ),
+    path('faculty-detailss/', faculty_detailss, name = 'faculty-detailss' ),
     path('faculty/', faculty, name = 'faculty' ),
     path('notice-details/', notice_details, name = 'notice-details' ),
     path('research/', research, name = 'research' ),

@@ -7,7 +7,7 @@
 
 
     <!-- BREADCRUMB AREA -->
-    <section class="rts-breadcrumb breadcrumb-height breadcumb-bg" style="background-image: url(assets/images/banner/breadcrumb.jpg);">
+    <section class="rts-breadcrumb breadcrumb-height breadcumb-bg" style="background-image: url({% static 'assets/images/banner/breadcrumb.jpg' %});">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -64,10 +64,10 @@
                     </div>
                 </div>
                 <!-- single staff item -->
+                <div class="rts-load-more-btn rt-center mt--60">
+                    <a href="{% url 'faculty-details' facultydirectory.id %}" class="rts-theme-btn primary lh-100">Загружайте больше</a>
+                </div>
                 {% endfor %}
-            </div>
-            <div class="rts-load-more-btn rt-center mt--60">
-                <a href="{% url 'faculty-details' facultydirectory.id %}" class="rts-theme-btn primary lh-100">Загружайте больше</a>
             </div>
         </div>
     </section>

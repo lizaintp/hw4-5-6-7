@@ -138,8 +138,138 @@ class Alumni(models.Model):
         verbose_name='Изображение'
     )
     def __str__(self):
-        return self. title
+        return self.title
     
     class Meta:
         verbose_name = 'Выпускник'
         verbose_name_plural = 'Выпускники'
+
+class CampusLive(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    desc = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = 'Кампус'
+        verbose_name_plural = 'Кампусы'
+
+class StudentLife(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    desc = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = 'Жизнь студента'
+        verbose_name_plural = 'Жизни студента'
+
+class ArtCulture(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    desc = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = 'Искуство и культура'
+        verbose_name_plural = 'Искуства и культуры'
+
+class Sport(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    desc = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = 'Спорт'
+        verbose_name_plural = 'Спорт'
+
+class Academics(models.Model):
+    desc = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    class Meta:
+        verbose_name = 'Ученый'
+        verbose_name_plural = 'Ученые'
+
+class Purpose(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    desc = models.TextField(
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = 'Цель'
+        verbose_name_plural = 'Цели'
+
+class UpcomingEvent(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    location = models.CharField(
+        max_length=255,
+        verbose_name="Описание"
+    )
+    image = models.ImageField(
+        upload_to='image/',
+        verbose_name='Изображение'
+    )
+    data = models.DateField(
+        verbose_name="Дата"
+    )
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = 'Предстоящее событие'
+        verbose_name_plural = 'Предстоящии событии'
