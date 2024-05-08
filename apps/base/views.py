@@ -3,7 +3,7 @@ from apps.base.models import Settings, Title, Student, Graduate, LifelongLearnin
 # Create your views here.
 
 def index(request):
-    settings = Settings.objects.all()
+    settings = Settings.objects.latest('id')
     title = Title.objects.all()
     student = Student.objects.all()
     graduate = Graduate.objects.all()

@@ -6,14 +6,14 @@
                 <div class="header__wrapper">
                     <div class="header__logo">
                         <a href="{% url 'index' %}" class="header__logo--link">
-                            <img src="{% static 'assets/images/logo/logo__two.svg' %}" alt="unipix">
+                            <img src="{{settings.logo.url}}" alt="unipix">
                         </a>
                     </div>
                     <div class="header__menu">
                         <div class="navigation">
                             <nav class="navigation__menu">
                                 <ul>                                   
-                                        <a href="{% url 'index' %}" class="navigation__menu--item__link">Главная страница</a>                                   
+                                    <a href="{% url 'index' %}" class="navigation__menu--item__link">Главная страница</a>                                   
                                     <li class="navigation__menu--item has-child has-arrow">
                                         <a href="javascript:void(0);" class="navigation__menu--item__link">Страницы</a>
                                         <ul class="submenu sub__style">

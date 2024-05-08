@@ -58,7 +58,7 @@
                                 <div class="staf-info__speciality">
                                     <p>{{facultydirectory.desc}}</p>
                                 </div>
-                                <a href="{% url 'faculty-details' %}" class="rts-theme-btn border-btn">Больше деталей</a>
+                                <a href="{% url 'faculty-details' facultydirectory.id %}" class="rts-theme-btn border-btn">Больше деталей</a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                 {% endfor %}
             </div>
             <div class="rts-load-more-btn rt-center mt--60">
-                <a href="{% url 'faculty-details' %}" class="rts-theme-btn primary lh-100">Загружайте больше</a>
+                <a href="{% url 'faculty-details' facultydirectory.id %}" class="rts-theme-btn primary lh-100">Загружайте больше</a>
             </div>
         </div>
     </section>
