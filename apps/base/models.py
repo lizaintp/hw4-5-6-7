@@ -12,7 +12,7 @@ class Settings(models.Model):
     )
     insta = models.URLField(
         max_length=255,
-        verbose_name='Телефон'
+        verbose_name='Инстаграм'
     )
     def __str__(self):
         return self.fullname
